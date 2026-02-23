@@ -1,0 +1,12 @@
+# VSCode
+.vscode/
+*.code-workspace
+
+# Python virtual environment
+venv/
+.venv/
+env/
+.env/
+
+# Kiro
+.kiro/
