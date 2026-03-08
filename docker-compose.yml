@@ -1,0 +1,60 @@
+version: '3.8'
+
+# Configuración de Docker Compose para desarrollo local
+# Proporciona servicios web (Django) y db (PostgreSQL) con hot reload
+
+services:
+  # Servicio de base de datos PostgreSQL 16
+  db:
+    image: postgres:16
+    container_name: reflex_docs_db
+    environment:
+      # Variables de entorno leídas desde archivo .env
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    ports:
+      # Exponer PostgreSQL en puerto 5432
+      - "5432:5432"
+    volumes:
+      # Volumen persistente para datos de PostgreSQL
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      # Health check para verificar que la base de datos está lista
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER} -d ${DB_NAME}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Servicio web Django con hot reload
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: reflex_docs_web
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      # Montar código fuente como volumen para hot reload
+      - .:/app
+    ports:
+      # Exponer servidor de desarrollo en puerto 8000
+      - "8000:8000"
+    environment:
+      # Variables de entorno leídas desde archivo .env
+      SECRET_KEY: ${SECRET_KEY}
+      DEBUG: ${DEBUG}
+      ALLOWED_HOSTS: ${ALLOWED_HOSTS}
+      DB_NAME: ${DB_NAME}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_HOST: db
+      DB_PORT: 5432
+    depends_on:
+      db:
+        # Esperar a que el health check de db sea exitoso antes de iniciar
+        condition: service_healthy
+
+# Volúmenes nombrados para persistencia de datos
+volumes:
+  postgres_data:
+    name: reflex_docs_postgres_data

@@ -1,0 +1,145 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Acerca de - Reflex Docs{% endblock %}
+
+{% block content %}
+<div class="px-4 py-8">
+    {# Encabezado de la página #}
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-4xl font-bold text-gray-900 mb-6">
+            Acerca de Reflex Docs
+        </h1>
+
+        {# Sección: ¿Qué es Reflex Docs? #}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">
+                ¿Qué es Reflex Docs?
+            </h2>
+            <p class="text-gray-700 mb-4">
+                Reflex Docs es una plataforma completa de documentación y aprendizaje 
+                para el framework Reflex, diseñada para ayudar a desarrolladores de todos 
+                los niveles a dominar este poderoso framework Python full-stack.
+            </p>
+            <p class="text-gray-700">
+                Nuestro objetivo es proporcionar recursos educativos de alta calidad, 
+                desde tutoriales paso a paso hasta documentación técnica detallada, 
+                todo en un solo lugar accesible y fácil de usar.
+            </p>
+        </div>
+
+        {# Sección: ¿Qué es Reflex? #}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">
+                ¿Qué es Reflex?
+            </h2>
+            <p class="text-gray-700 mb-4">
+                Reflex es un framework Python full-stack que te permite construir 
+                aplicaciones web modernas utilizando únicamente Python. No necesitas 
+                aprender JavaScript, HTML o CSS para crear interfaces de usuario 
+                interactivas y responsivas.
+            </p>
+            <p class="text-gray-700">
+                Con Reflex, puedes desarrollar tanto el frontend como el backend 
+                de tu aplicación en Python, aprovechando todo el ecosistema de 
+                bibliotecas y herramientas que ya conoces.
+            </p>
+        </div>
+
+        {# Sección: Características del sitio #}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">
+                Características
+            </h2>
+            <ul class="space-y-3">
+                <li class="flex items-start">
+                    <svg class="w-6 h-6 text-indigo-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    <span class="text-gray-700">
+                        <strong>Tutoriales estructurados:</strong> Aprende Reflex paso a paso 
+                        con guías detalladas y ejemplos prácticos.
+                    </span>
+                </li>
+                <li class="flex items-start">
+                    <svg class="w-6 h-6 text-indigo-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    <span class="text-gray-700">
+                        <strong>Referencia de componentes:</strong> Documentación completa 
+                        de todos los componentes disponibles en Reflex.
+                    </span>
+                </li>
+                <li class="flex items-start">
+                    <svg class="w-6 h-6 text-indigo-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    <span class="text-gray-700">
+                        <strong>Playground interactivo:</strong> Experimenta con ejemplos 
+                        de código con resaltado de sintaxis.
+                    </span>
+                </li>
+                <li class="flex items-start">
+                    <svg class="w-6 h-6 text-indigo-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    <span class="text-gray-700">
+                        <strong>Gestión de perfil:</strong> Crea una cuenta para guardar 
+                        tu progreso y personalizar tu experiencia.
+                    </span>
+                </li>
+            </ul>
+        </div>
+
+        {# Sección: Tecnologías utilizadas #}
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">
+                Tecnologías
+            </h2>
+            <p class="text-gray-700 mb-4">
+                Este sitio está construido con tecnologías modernas y robustas:
+            </p>
+            <ul class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <li class="flex items-center text-gray-700">
+                    <span class="w-2 h-2 bg-indigo-600 rounded-full mr-3"></span>
+                    Django 5.0 (Framework web)
+                </li>
+                <li class="flex items-center text-gray-700">
+                    <span class="w-2 h-2 bg-indigo-600 rounded-full mr-3"></span>
+                    PostgreSQL 16 (Base de datos)
+                </li>
+                <li class="flex items-center text-gray-700">
+                    <span class="w-2 h-2 bg-indigo-600 rounded-full mr-3"></span>
+                    TailwindCSS (Estilos)
+                </li>
+                <li class="flex items-center text-gray-700">
+                    <span class="w-2 h-2 bg-indigo-600 rounded-full mr-3"></span>
+                    Docker (Contenedorización)
+                </li>
+                <li class="flex items-center text-gray-700">
+                    <span class="w-2 h-2 bg-indigo-600 rounded-full mr-3"></span>
+                    Nginx (Servidor web)
+                </li>
+                <li class="flex items-center text-gray-700">
+                    <span class="w-2 h-2 bg-indigo-600 rounded-full mr-3"></span>
+                    Gunicorn (Servidor WSGI)
+                </li>
+            </ul>
+        </div>
+
+        {# Sección: Contacto o contribución #}
+        <div class="bg-indigo-50 rounded-lg p-8 text-center">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">
+                ¿Quieres contribuir?
+            </h2>
+            <p class="text-gray-700 mb-6">
+                Este proyecto está en constante evolución. Si encuentras algún error 
+                o tienes sugerencias para mejorar la documentación, nos encantaría 
+                escucharte.
+            </p>
+            <a href="/" class="inline-block bg-indigo-600 text-white px-6 py-3 rounded-md font-medium hover:bg-indigo-700 transition-colors">
+                Volver al inicio
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}
