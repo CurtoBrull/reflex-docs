@@ -6,11 +6,7 @@ Este plan implementa un sistema web Django completo de documentación para el fr
 
 ## Tareas
 
-<<<<<<< HEAD
 - [ ] 1. Configurar estructura base del proyecto Django
-=======
-- [x] 1. Configurar estructura base del proyecto Django
->>>>>>> 48608e1 (docs: Agregar documentación del proyecto (NORMAS, design, requirements, tasks))
   - Crear directorio del proyecto y estructura de carpetas
   - Configurar directorio `config/` con settings.py, urls.py, wsgi.py
   - Crear manage.py
@@ -18,11 +14,7 @@ Este plan implementa un sistema web Django completo de documentación para el fr
   - Crear archivos requirements.txt y requirements-dev.txt con dependencias
   - _Requisitos: 1.1, 1.2, 1.3, 1.4, 1.5_
 
-<<<<<<< HEAD
 - [ ] 2. Configurar gestión de variables de entorno y settings
-=======
-- [x] 2. Configurar gestión de variables de entorno y settings
->>>>>>> 48608e1 (docs: Agregar documentación del proyecto (NORMAS, design, requirements, tasks))
   - Instalar python-decouple
   - Crear archivo .env.example con todas las variables requeridas
   - Configurar settings.py para leer SECRET_KEY, DEBUG, ALLOWED_HOSTS desde variables de entorno
@@ -30,22 +22,14 @@ Este plan implementa un sistema web Django completo de documentación para el fr
   - Crear .gitignore excluyendo .env
   - _Requisitos: 3.1, 3.2, 3.3, 3.4, 3.5_
 
-<<<<<<< HEAD
 - [ ] 3. Configurar base de datos PostgreSQL
-=======
-- [x] 3. Configurar base de datos PostgreSQL
->>>>>>> 48608e1 (docs: Agregar documentación del proyecto (NORMAS, design, requirements, tasks))
   - Configurar DATABASES en settings.py usando psycopg2-binary
   - Leer credenciales desde variables de entorno (DB_NAME, DB_USER, DB_PASSWORD, DB_HOST, DB_PORT)
   - Implementar verificación de conexión en startup con manejo de errores
   - Configurar LANGUAGE_CODE='es-es' y TIME_ZONE='Europe/Madrid'
   - _Requisitos: 2.1, 2.2, 2.3, 2.4, 2.5, 10.1, 10.2, 10.3, 10.4_
 
-<<<<<<< HEAD
 - [ ] 4. Configurar contenedorización Docker
-=======
-- [x] 4. Configurar contenedorización Docker
->>>>>>> 48608e1 (docs: Agregar documentación del proyecto (NORMAS, design, requirements, tasks))
   - Crear Dockerfile basado en python:3.12-slim
   - Configurar PYTHONDONTWRITEBYTECODE=1 y PYTHONUNBUFFERED=1
   - Instalar dependencias del sistema: libpq-dev, gcc
@@ -53,11 +37,7 @@ Este plan implementa un sistema web Django completo de documentación para el fr
   - Crear .dockerignore con archivos a excluir
   - _Requisitos: 4.1, 4.2, 4.3, 4.4, 4.5_
 
-<<<<<<< HEAD
 - [ ] 5. Configurar entorno de desarrollo local
-=======
-- [x] 5. Configurar entorno de desarrollo local
->>>>>>> 48608e1 (docs: Agregar documentación del proyecto (NORMAS, design, requirements, tasks))
   - Crear docker-compose.yml con servicios web y db
   - Configurar servicio web con hot reload montando código como volumen
   - Configurar servicio db con PostgreSQL 16
@@ -65,29 +45,17 @@ Este plan implementa un sistema web Django completo de documentación para el fr
   - Crear volumen persistente para datos de PostgreSQL
   - _Requisitos: 5.1, 5.2, 5.3, 5.4, 5.5, 5.6_
 
-<<<<<<< HEAD
 - [ ] 6. Checkpoint - Verificar configuración base
   - Asegurarse de que todos los tests pasen, preguntar al usuario si surgen dudas.
 
 - [ ] 7. Implementar app Core
   - [ ] 7.1 Crear estructura de la app core
-=======
-- [x] 6. Checkpoint - Verificar configuración base
-  - Asegurarse de que todos los tests pasen, preguntar al usuario si surgen dudas.
-
-- [x] 7. Implementar app Core
-  - [x] 7.1 Crear estructura de la app core
->>>>>>> 48608e1 (docs: Agregar documentación del proyecto (NORMAS, design, requirements, tasks))
     - Ejecutar `python manage.py startapp core`
     - Registrar app en INSTALLED_APPS
     - Crear templates/core/ con base.html, home.html, about.html
     - _Requisitos: 11.1, 11.2, 11.3, 11.4_
   
-<<<<<<< HEAD
   - [ ] 7.2 Implementar vistas de Core
-=======
-  - [x] 7.2 Implementar vistas de Core
->>>>>>> 48608e1 (docs: Agregar documentación del proyecto (NORMAS, design, requirements, tasks))
     - Crear HomeView en views.py
     - Crear AboutView en views.py
     - Configurar urls.py con rutas / y /about/
