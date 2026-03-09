@@ -1,0 +1,16 @@
+# Dependencias de producción para el proyecto Django reflex-docs
+
+# Framework Django
+Django>=5.0,<5.1
+
+# Adaptador PostgreSQL
+psycopg2-binary>=2.9,<3.0
+
+# Gestión de variables de entorno
+python-decouple>=3.8,<4.0
+
+# Procesamiento de imágenes
+Pillow>=10.0,<11.0
+
+# Servidor HTTP WSGI para producción
+gunicorn>=21.0,<22.0

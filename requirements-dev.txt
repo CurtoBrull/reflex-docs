@@ -1,0 +1,17 @@
+# Dependencias de desarrollo para el proyecto Django reflex-docs
+
+# Incluir dependencias de producción
+-r requirements.txt
+
+# Calidad de código y linting
+flake8>=7.0,<8.0
+
+# Framework de testing
+pytest>=8.0,<9.0
+pytest-django>=4.7,<5.0
+
+# Testing basado en propiedades
+hypothesis>=6.92,<7.0
+
+# Cobertura de código
+coverage>=7.4,<8.0
